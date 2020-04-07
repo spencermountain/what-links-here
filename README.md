@@ -1,65 +1,36 @@
-# what-links-here README
+[![Marketplace](https://vsmarketplacebadge.apphb.com/version/akamud.vscode-theme-onedark.svg)](https://marketplace.visualstudio.com/items/akamud.vscode-theme-onedark)
 
-This is the README for your extension "what-links-here". After writing up a brief description, we recommend including the following sections.
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/akamud.vscode-theme-onedark.svg)](https://marketplace.visualstudio.com/items/akamud.vscode-theme-onedark)
 
-## Features
+---
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+This is a vsCode extension for javascript projects, that opens any files that **require or import**, your current file.
 
-For example if there is an image subfolder under your extension project workspace:
+It takes a second, but then lets you quickly open any **_incoming links_**.
 
-\!\[feature X\]\(images/feature-x.png\)
+![what-links-here](https://user-images.githubusercontent.com/399657/78697674-2acf1800-78cf-11ea-8d7d-17f7b71b7f0a.gif)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### How it works
 
-## Requirements
+This extension grabs all javascript files in your current workspaces, and uses [Acorn](https://github.com/acornjs/acorn) to lex them, and find their imports.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+If it imports the current file, it is added to our results list, in the quickOpen dropdown.
 
-## Extension Settings
+Typescript/JSX/coffeescript is in unknown status.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### Thank you
 
-For example:
+- [acorn-umd](https://github.com/megawac/acorn-umd) by Graeme Yeates
+- [find-all-imports](https://github.com/oaprograms/vscode-extension-find-all-imports) by Ognjen
 
-This extension contributes the following settings:
+this is my first vscode extension, please go easy on me!
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+MIT
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+<!--
+copy into plugins dir:
+```
+cp -r /Users/spencer/priv/dotfiles/mountain ~/.vscode/extensions
+```
+reload
+-->

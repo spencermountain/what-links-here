@@ -1,44 +1,38 @@
 {
-	"name": "what-links-here",
-	"displayName": "what-links-here",
-	"description": "find which files import this file",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.43.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.helloWorld"
-	],
-	"main": "./extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			}
-		]
-	},
-	"scripts": {
-		"lint": "eslint .",
-		"pretest": "npm run lint",
-		"test": "node ./test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^7.0.1",
-		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.43.0",
-		"eslint": "^6.8.0",
-		"glob": "^7.1.6",
-		"mocha": "^7.0.1",
-		"typescript": "^3.7.5",
-		"vscode-test": "^1.3.0"
-	},
-	"dependencies": {
-		"acorn": "^7.1.1",
-		"acorn-umd": "^0.4.0"
-	}
+  "name": "what-links-here",
+  "displayName": "what-links-here",
+  "description": "spencers vscode extensions",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.35.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.what-links-here"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.what-links-here",
+        "title": "What Links Here"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28",
+    "@types/node": "^10.12.21",
+    "@types/mocha": "^2.2.42"
+  },
+  "dependencies": {
+    "acorn": "^7.1.1",
+    "acorn-umd": "^0.4.0"
+  }
 }

@@ -1,30 +1,34 @@
-// 'CallExpression'
-// ImportDeclaration
-const acorn = require('acorn')
 const fs = require('fs')
+const acorn = require('acorn')
+const umd = require('acorn-umd')
+const path = require('path')
 
-var umd = require('acorn-umd')
-// const walk = require('acorn-walk')
-
-let code = `
-const foo = require('./fun')
-
-// import lib from 'cool'
-`
-// code = `require('./fun')`
-
-// walk.full(acorn.parse(code), (node, state, type) => {
-//   console.log(node)
-//   // console.log(`There's a ${node.type} node at ${node.ch}`)
-// })
-let path = '/Users/spencer/mountain/wtf_wikipedia/src/image/index.js'
-const source = fs.readFileSync(path).toString()
-
-var ast = acorn.parse(source, { ecmaVersion: 6 })
-var imports = umd(ast, {
-  es6: true,
-  amd: false,
-  cjs: true,
-})
-
-console.log(imports.map((obj) => obj.source.value))
+const getImports = function (abs) {
+  try {
+    const source = fs.readFileSync(abs).toString()
+    var ast = acorn.parse(source, { ecmaVersion: 6 })
+    var imports = umd(ast, {
+      es6: true,
+      amd: true,
+      cjs: true,
+    })
+  } catch (e) {
+    console.log('failed')
+    return []
+  }
+  // console.log('passed-try')
+  const folder = path.dirname(abs)
+  // console.log('got-folder')
+  let rels = imports.map((obj) => obj.source.value)
+  // console.log('did-map')
+  let found = rels.map((rel) => {
+    let file = path.join(folder, rel)
+    // add .js to end
+    if (!path.extname(file)) {
+      file += '.js'
+    }
+    return file
+  })
+  return found
+}
+module.exports = getImports
