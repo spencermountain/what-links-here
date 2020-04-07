@@ -1,14 +1,20 @@
 {
   "name": "what-links-here",
-  "displayName": "what-links-here",
-  "description": "spencers vscode extensions",
+  "displayName": "What Links Here",
+  "description": "find incoming links to a javascript file",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.35.0"
   },
+  "keywords": [
+    "incoming links",
+    "inbound links",
+    "required files",
+    "import graph"
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/spencermountain/what-links-here.git"
+    "url": "https://github.com/spencermountain/what-links-here.git"
   },
   "publisher": "spencermountain",
   "categories": [
@@ -17,6 +23,7 @@
   "activationEvents": [
     "onCommand:extension.what-links-here"
   ],
+  "icon": "Tree.png",
   "main": "./extension.js",
   "contributes": {
     "commands": [
