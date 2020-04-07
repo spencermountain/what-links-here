@@ -6,6 +6,11 @@
   "engines": {
     "vscode": "^1.35.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/spencermountain/what-links-here.git"
+  },
+  "publisher": "spencermountain",
   "categories": [
     "Other"
   ],

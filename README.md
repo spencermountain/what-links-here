@@ -1,6 +1,19 @@
-[![Marketplace](https://vsmarketplacebadge.apphb.com/version/akamud.vscode-theme-onedark.svg)](https://marketplace.visualstudio.com/items/akamud.vscode-theme-onedark)
+<div align="center">
+  <div><b>what-links-here</b></div>
+  <img src="https://user-images.githubusercontent.com/399657/68222691-6597f180-ffb9-11e9-8a32-a7f38aa8bded.png"/>
+  <div>vsCode extension to open 'incoming' required files</div>
+  <div align="center">
+    <sub>
+      by
+      <a href="https://github.com/spencermountain">Spencer Kelly</a> and
+    </sub>
+  </div>
+  <img height="25px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
+</div>
 
-[![Installs](https://vsmarketplacebadge.apphb.com/installs/akamud.vscode-theme-onedark.svg)](https://marketplace.visualstudio.com/items/akamud.vscode-theme-onedark)
+[![Marketplace](https://vsmarketplacebadge.apphb.com/version/spencermountain.what-links-here.svg)](https://marketplace.visualstudio.com/items/spencermountain.what-links-here)
+
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/spencermountain.what-links-here.svg)](https://marketplace.visualstudio.com/items/spencermountain.what-links-here)
 
 ---
 

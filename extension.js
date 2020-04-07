@@ -8,8 +8,7 @@ function activate(context) {
     'extension.what-links-here',
     function () {
       let ourFile = vscode.window.activeTextEditor.document.fileName
-      // ourFile = '/Users/spencer/mountain/wtf_wikipedia/src/image/nested_find.js'
-      console.log(ourFile)
+      // console.log(ourFile)
       let allFiles = getFiles()
       let foundFiles = []
       allFiles.forEach((file) => {
