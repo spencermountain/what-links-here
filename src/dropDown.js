@@ -10,7 +10,7 @@ const dropDown = function (foundFiles, ourFile) {
           label: 'No links found',
         },
       ])
-      .then(() => {})
+      .then(() => { })
     return
   }
   let showArr = foundFiles.map((abs, i) => {

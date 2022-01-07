@@ -18,7 +18,7 @@ function activate(context) {
           if (required.find((f) => f === ourFile)) {
             foundFiles.push(file)
           }
-        } catch (e) {}
+        } catch (e) { }
       })
       dropDown(foundFiles, ourFile)
     }
@@ -26,10 +26,9 @@ function activate(context) {
 
   context.subscriptions.push(disposable)
 }
-exports.activate = activate
 
 // this method is called when your extension is deactivated
-function deactivate() {}
+function deactivate() { }
 
 module.exports = {
   activate,
